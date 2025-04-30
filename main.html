@@ -3,117 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Animated Homepage</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-      background-color: #fff;
-    }
-    header {
-      height: 100vh;
-      background: linear-gradient(135deg, #1d2b64, #f8cdda);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-      position: relative;
-      overflow: hidden;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 1%, transparent 70%);
-      animation: float 10s infinite linear;
-      z-index: 0;
-    }
-    h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      animation: slideInDown 1.2s ease-out;
-      position: relative;
-      z-index: 1;
-    }
-    p {
-      font-size: 1.5rem;
-      font-weight: 300;
-      animation: slideInUp 1.5s ease-out;
-      position: relative;
-      z-index: 1;
-    }
-    section {
-      padding: 4rem 2rem;
-      background: #f0f0f0;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-    .card {
-      display: inline-block;
-      margin: 1rem;
-      padding: 2rem 3rem;
-      background: white;
-      border-radius: 1.5rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: #333;
-    }
-    .card:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    @keyframes slideInDown {
-      0% { transform: translateY(-50px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    @keyframes slideInUp {
-      0% { transform: translateY(50px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    @keyframes float {
-      0% {
-        background-position: 0% 0%;
-      }
-      100% {
-        background-position: 100% 100%;
-      }
-    }
-  </style>
+  <title>Your Company</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" /> <!-- Place your logo here -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Syscal Tech</h1>
-    <p>Innovative solutions with stunning design and smooth performance.</p>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">YourCompany</div>
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to <span>YourCompany</span></h1>
+    <p>We deliver creative, fast, and modern web solutions.</p>
   </header>
-  <section>
+
+  <!-- Services -->
+  <section class="services">
     <h2>Our Services</h2>
-    <div class="card">Web Development</div>
-    <div class="card">UI/UX Design</div>
-    <div class="card">Brand Strategy</div>
+    <div class="card-container">
+      <div class="card">💻 Web Development</div>
+      <div class="card">📱 App Design</div>
+      <div class="card">🚀 SEO Optimization</div>
+    </div>
   </section>
+
 </body>
 </html>
-
