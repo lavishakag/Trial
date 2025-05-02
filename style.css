@@ -16,6 +16,10 @@
       animation: fadeIn 2s ease;
       position: relative;
       overflow: hidden;
+justify-content: center; /* Centers the text vertically */
+    align-items: center; /* Centers the text horizontally */
+    height: 100vh; /* Ensure the section takes up full height of the viewport */
+
     }
     .hero-section h1, .hero-section p, .hero-section a {
       animation: slideUp 1.5s ease forwards;
