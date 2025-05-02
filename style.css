@@ -5,8 +5,7 @@
       overflow-x: hidden;
     }
     .hero-section {
-      /* padding: 100px 0; */
-padding-bottom: 10px; 
+      padding: 100px 0;
       text-align: center;
       background: #1E3C72;
       background: linear-gradient(to right, #2A5298, #1E3C72);
