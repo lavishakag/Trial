@@ -6,21 +6,22 @@
     }
 
     .hero-section {
-    /*  padding: 100px 0; */
- min-height: 150vh; /* Full screen height */
+  min-height: 100vh; /* Full screen height */
   padding-top: 120px; /* Adjusted for navbar height */
   padding-bottom: 100px;
-      text-align: center;
-      background: #1E3C72;
-      background: linear-gradient(to right, #2A5298, #1E3C72);
-      animation: fadeIn 2s ease;
-      position: relative;
-      overflow: hidden;
-justify-content: center; /* Centers the text vertically */
-    align-items: center; /* Centers the text horizontally */
-    height: 100vh; /* Ensure the section takes up full height of the viewport */
-
-    }
+  text-align: center;
+  background: #1E3C72;
+  background: linear-gradient(to right, #2A5298, #1E3C72);
+  animation: fadeIn 2s ease;
+  position: relative;
+  overflow: hidden;
+  
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+}
     .hero-section h1, .hero-section p, .hero-section a {
       animation: slideUp 1.5s ease forwards;
       opacity: 0;
