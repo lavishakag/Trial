@@ -275,6 +275,85 @@
 </section>
 
 
+<script>
+  document.getElementById('categorySelect').addEventListener('change', function () {
+    const value = this.value;
+    document.querySelectorAll('.category-group').forEach(el => el.classList.add('d-none'));
+    if (value === 'client') document.getElementById('clientFields').classList.remove('d-none');
+    else if (value === 'vendor') document.getElementById('vendorFields').classList.remove('d-none');
+    else if (value === 'individual') document.getElementById('individualFields').classList.remove('d-none');
+  });
+</script>
+
+
+<section id="careers" class="container py-5">
+  <h2 class="text-center mb-4">Partner with Us / Apply for Jobs</h2>
+
+  <form id="partnershipForm" class="bg-light p-4 rounded shadow-sm">
+    <div class="mb-3">
+      <label class="form-label">Select Category</label>
+      <select class="form-select" id="categorySelect" required>
+        <option value="">-- Select --</option>
+        <option value="client">Client Partnership</option>
+        <option value="vendor">Vendor Partnership</option>
+        <option value="individual">Applying as Individual</option>
+      </select>
+    </div>
+
+    <!-- Client Partnership -->
+    <div id="clientFields" class="category-group d-none">
+      <div class="mb-3">
+        <label class="form-label">Company Name</label>
+        <input type="text" class="form-control" name="client_company">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Requirements</label>
+        <textarea class="form-control" name="client_requirements"></textarea>
+      </div>
+    </div>
+
+    <!-- Vendor Partnership -->
+    <div id="vendorFields" class="category-group d-none">
+      <div class="mb-3">
+        <label class="form-label">Vendor Company</label>
+        <input type="text" class="form-control" name="vendor_company">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Area of Expertise</label>
+        <input type="text" class="form-control" name="vendor_expertise">
+      </div>
+    </div>
+
+    <!-- Individual Applicant -->
+    <div id="individualFields" class="category-group d-none">
+      <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" name="applicant_name">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Skills</label>
+        <input type="text" class="form-control" name="applicant_skills">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Resume</label>
+        <input type="file" class="form-control" name="applicant_resume">
+      </div>
+    </div>
+
+    <!-- Common Fields -->
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Phone</label>
+      <input type="tel" class="form-control" name="phone">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</section>
+
 
 <section id="contact" class="contact-section text-white py-5">
   <div class="container">
