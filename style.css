@@ -78,6 +78,61 @@
       box-shadow: 0 6px 25px rgba(0,0,0,0.4);
     }
 
+.contact-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.contact-section .contact-icon {
+  margin-right: 10px;
+  color: #00d4ff;
+  animation: float 1.5s ease-in-out infinite;
+}
+
+.map-container {
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.client-logo {
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.client-logo:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+    .team-img 
+{
+  width: 50px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
     .footer {
       background: #2C3E50;
       padding: 20px 0;
