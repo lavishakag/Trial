@@ -2,8 +2,11 @@
     body {
       background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
       color: #fff;
-      font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+}
 
     .navbar {
       background-color: #ccccff;
