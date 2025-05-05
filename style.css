@@ -32,11 +32,18 @@
       overflow: hidden;
     }
 
+
+
     .hero-section h1, .hero-section p, .hero-section a {
       animation: slideUp 1.5s ease forwards;
-      font-family: "Times New Roman", Times, serif;
-      opacity: 0;
+ font-family: 'Poppins', sans-serif; /* or choose another font */      opacity: 0;
     }
+
+
+.hero-section p {
+  font-weight: 700; /* Makes the paragraph bold */
+}
+
     .hero-section h1 { animation-delay: 0.5s; }
     .hero-section p { animation-delay: 1s; }
     .hero-section a { animation-delay: 1.5s; }
