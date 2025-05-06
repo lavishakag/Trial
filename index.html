@@ -74,19 +74,18 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-      <!--  <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" data-bs-toggle="dropdown">Services</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#weoffer">What We Offer</a></li>
-          </ul>
-        </li>
--->
 
+	       <li class="nav-item dropdown position-relative">
+	      <a class="nav-link dropdown-toggle" href="#about" id="servicesDropdown" role="button">About</a>
+	         <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+             <li><a class="dropdown-item" href="#partner">Partner with Us</a></li>
+           <li><a class="dropdown-item" href="#career">Career</a></li>
+          </ul>
+       </li>
+   
+	
  <li class="nav-item dropdown position-relative">
-          <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button">
-            Services
-          </a>
+          <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button">Services</a>
           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
              <li><a class="dropdown-item" href="#weoffer">What We Offer</a></li>
           </ul>
@@ -263,74 +262,6 @@
 
     </div>
   </div>
-</section>
-
-<section id="business-partnership" class="container py-5">
-  <h2 class="text-center mb-4">Partner With Us</h2>
-  <form class="bg-light text-dark p-4 rounded shadow-sm">
-    <div class="mb-3">
-      <label class="form-label">Partnership Type</label>
-      <select class="form-select" required>
-        <option value="">-- Select --</option>
-        <option value="client">Client Partnership</option>
-        <option value="vendor">Vendor Partnership</option>
-      </select>
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">Company Name</label>
-      <input type="text" class="form-control" required>
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">Your Requirements / Expertise</label>
-      <textarea class="form-control" rows="4" required></textarea>
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">Contact Email</label>
-      <input type="email" class="form-control" required>
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">Contact Phone</label>
-      <input type="tel" class="form-control">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</section>
-
-<section id="careers" class="container py-5">
-  <h2 class="text-center mb-4">Apply for a Job</h2>
-  <form class="bg-light text-dark p-4 rounded shadow-sm">
-    <div class="mb-3">
-      <label class="form-label">Full Name</label>
-      <input type="text" class="form-control" required>
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">Email</label>
-      <input type="email" class="form-control" required>
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">Phone</label>
-      <input type="tel" class="form-control">
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">Key Skills</label>
-      <input type="text" class="form-control" placeholder="e.g., Java, Python, React" required>
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">Upload Resume</label>
-      <input type="file" class="form-control" required>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Submit Application</button>
-  </form>
 </section>
 
 <section id="contact" class="contact-section text-white py-5">
