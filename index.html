@@ -228,15 +228,6 @@
           </div>
         </div>
       </div>
-   <!--    <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-secondary rounded-circle" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-     </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-secondary rounded-circle" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
--->
     </div>
   </div>
 </section>
@@ -274,86 +265,73 @@
   </div>
 </section>
 
-
-<script>
-  document.getElementById('categorySelect').addEventListener('change', function () {
-    const value = this.value;
-    document.querySelectorAll('.category-group').forEach(el => el.classList.add('d-none'));
-    if (value === 'client') document.getElementById('clientFields').classList.remove('d-none');
-    else if (value === 'vendor') document.getElementById('vendorFields').classList.remove('d-none');
-    else if (value === 'individual') document.getElementById('individualFields').classList.remove('d-none');
-  });
-</script>
-
-
-<section id="careers" class="container py-5">
-  <h2 class="text-center mb-4">Partner with Us / Apply for Jobs</h2>
-
-  <form id="partnershipForm" class="bg-light p-4 rounded shadow-sm">
+<section id="business-partnership" class="container py-5">
+  <h2 class="text-center mb-4">Partner With Us</h2>
+  <form class="bg-light text-dark p-4 rounded shadow-sm">
     <div class="mb-3">
-      <label class="form-label">Select Category</label>
-      <select class="form-select" id="categorySelect" required>
+      <label class="form-label">Partnership Type</label>
+      <select class="form-select" required>
         <option value="">-- Select --</option>
         <option value="client">Client Partnership</option>
         <option value="vendor">Vendor Partnership</option>
-        <option value="individual">Applying as Individual</option>
       </select>
     </div>
 
-    <!-- Client Partnership -->
-    <div id="clientFields" class="category-group d-none">
-      <div class="mb-3">
-        <label class="form-label">Company Name</label>
-        <input type="text" class="form-control" name="client_company">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Requirements</label>
-        <textarea class="form-control" name="client_requirements"></textarea>
-      </div>
-    </div>
-
-    <!-- Vendor Partnership -->
-    <div id="vendorFields" class="category-group d-none">
-      <div class="mb-3">
-        <label class="form-label">Vendor Company</label>
-        <input type="text" class="form-control" name="vendor_company">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Area of Expertise</label>
-        <input type="text" class="form-control" name="vendor_expertise">
-      </div>
-    </div>
-
-    <!-- Individual Applicant -->
-    <div id="individualFields" class="category-group d-none">
-      <div class="mb-3">
-        <label class="form-label">Full Name</label>
-        <input type="text" class="form-control" name="applicant_name">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Skills</label>
-        <input type="text" class="form-control" name="applicant_skills">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Resume</label>
-        <input type="file" class="form-control" name="applicant_resume">
-      </div>
-    </div>
-
-    <!-- Common Fields -->
     <div class="mb-3">
-      <label class="form-label">Email</label>
-      <input type="email" class="form-control" name="email" required>
+      <label class="form-label">Company Name</label>
+      <input type="text" class="form-control" required>
     </div>
+
     <div class="mb-3">
-      <label class="form-label">Phone</label>
-      <input type="tel" class="form-control" name="phone">
+      <label class="form-label">Your Requirements / Expertise</label>
+      <textarea class="form-control" rows="4" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Contact Email</label>
+      <input type="email" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Contact Phone</label>
+      <input type="tel" class="form-control">
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </section>
 
+<section id="careers" class="container py-5">
+  <h2 class="text-center mb-4">Apply for a Job</h2>
+  <form class="bg-light text-dark p-4 rounded shadow-sm">
+    <div class="mb-3">
+      <label class="form-label">Full Name</label>
+      <input type="text" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Phone</label>
+      <input type="tel" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Key Skills</label>
+      <input type="text" class="form-control" placeholder="e.g., Java, Python, React" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Upload Resume</label>
+      <input type="file" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Application</button>
+  </form>
+</section>
 
 <section id="contact" class="contact-section text-white py-5">
   <div class="container">
