@@ -97,8 +97,10 @@
   <div class="container application-form animate__animated animate__fadeInUp">
     <h2 class="mb-4 text-center">Job Application Form</h2>
   <form action="https://formsubmit.co/hr@syscaltech.com" method="POST">
-          <input type="hidden" name="_next" value="thank-you.html">
-      <div class="row g-3">
+	  <input type="hidden" name="_next" value="thank-you.html">
+       <input type="hidden" name="_captcha" value="false">
+
+	  <div class="row g-3">
         <div class="col-md-6">
           <label for="name" class="form-label">Full Name</label>
           <input type="text" class="form-control" id="name" name="Full Name" required>
