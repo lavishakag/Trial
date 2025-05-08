@@ -144,30 +144,33 @@
   </div>
 </section>
 
-<!-- Success/Redirect Script -->
-<script>
-  const form = document.getElementById('Partnership');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const formData = new FormData(form);
+  <script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-    fetch(form.action, {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-      alert("Thank you! Your form was submitted successfully.");
-      window.location.href = "thank-you.html"; // optional redirect
-    })
-    .catch(error => {
-      alert("Oops! Something went wrong. Please try again.");
-      console.error('Error:', error);
-    });
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch("https://script.google.com/macros/s/AKfycbwiaML4aZUiOyoqbzQGsO2oYwH3AyQDlt4wJY43FZ1nrlAVWpzQ2mF7IyAy6LsQLKw2jg/exec", {
+    method: "POST",
+    body: data,
+  })
+  .then(response => {
+    if (response.ok) return response.text();
+    else throw new Error("Network response was not ok.");
+  })
+  .then(text => {
+    alert("Form submitted successfully!");
+    form.reset();
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("Oops! Something went wrong. Please try again.");
   });
+});
 </script>
 
-<!-- Bootstrap JS -->
+  <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
