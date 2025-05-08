@@ -96,42 +96,64 @@
 
   <div class="container application-form animate__animated animate__fadeInUp">
     <h2 class="mb-4 text-center">Job Application Form</h2>
-  <form action="https://formsubmit.co/hr@syscaltech.com" method="POST">
-	  <input type="hidden" name="_next" value="thank-you.html">
-       <input type="hidden" name="_captcha" value="false">
+<form id="CareerForm">
+  <input type="hidden" name="sheet" value="Career" />
 
-	  <div class="row g-3">
-        <div class="col-md-6">
-          <label for="name" class="form-label">Full Name</label>
-          <input type="text" class="form-control" id="name" name="Full Name" required>
-        </div>
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="Email" required>
-        </div>
-        <div class="col-md-6">
-          <label for="phone" class="form-label">Phone Number</label>
-          <input type="tel" class="form-control" id="phone" name="Phone Number" required>
-        </div>
-        <div class="col-md-6">
-          <label for="position" class="form-label">Position Applying For</label>
-          <input type="text" class="form-control" id="position" name="Position" required>
-        </div>
-        <div class="col-12">
-          <label for="resume" class="form-label">Resume (Paste Link)</label>
-          <input type="url" class="form-control" id="resume" name="Resume Link" placeholder="Google Drive / Dropbox Link" required>
-        </div>
-        <div class="col-12">
-          <label for="message" class="form-label">Cover Letter</label>
-          <textarea class="form-control" id="message" name="Cover Letter" rows="5"></textarea>
-        </div>
-        <div class="col-12 text-center">
-          <button type="submit" class="btn btn-primary px-5 mt-3">Submit Application</button>
-        </div>
-      </div>
-    </form>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" class="form-control" name="Full Name" required>
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" name="Email" required>
+    </div>
+    <div class="col-md-6">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" name="Phone Number" required>
+    </div>
+    <div class="col-md-6">
+      <label for="position" class="form-label">Position Applying For</label>
+      <input type="text" class="form-control" name="Position" required>
+    </div>
+    <div class="col-12">
+      <label for="resume" class="form-label">Resume (Paste Link)</label>
+      <input type="url" class="form-control" name="Resume Link" placeholder="Google Drive / Dropbox Link" required>
+    </div>
+    <div class="col-12">
+      <label for="message" class="form-label">Cover Letter</label>
+      <textarea class="form-control" name="Cover Letter" rows="5"></textarea>
+    </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary px-5 mt-3">Submit Application</button>
+    </div>
+  </div>
+</form>
   </div>
 
+<script>
+  document.getElementById("CareerForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch("https://script.google.com/macros/s/AKfycbwiaML4aZUiOyoqbzQGsO2oYwH3AyQDlt4wJY43FZ1nrlAVWpzQ2mF7IyAy6LsQLKw2jg/exec", {
+      method: "POST",
+      body: data,
+    })
+    .then(response => {
+      if (response.ok) return response.text();
+      else throw new Error("Submission failed");
+    })
+    .then(() => {
+      window.location.href = "thank-you.html";
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Oops! Something went wrong. Please try again.");
+    });
+  });
+</script>
   <footer>
     <p>&copy; 2025 Syscal Tech Pvt. Ltd. All Rights Reserved.</p>
   </footer>
