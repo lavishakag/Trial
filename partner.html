@@ -154,24 +154,25 @@
     const form = e.target;
     const data = new URLSearchParams(new FormData(form));
 
-    fetch("https://script.google.com/macros/s/AKfycbwiaML4aZUiOyoqbzQGsO2oYwH3AyQDlt4wJY43FZ1nrlAVWpzQ2mF7IyAy6LsQLKw2jg/exec", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body: data.toString(),
-    })
-    .then(response => {
-      if (response.ok) return response.text();
-      else throw new Error("Network response was not ok.");
-    })
-    .then(() => {
-      window.location.href = "thank-you.html";
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      alert("❌ Oops! Something went wrong. Please try again.");
-    });
+   fetch("https://script.google.com/macros/s/AKfycbwiaML4aZUiOyoqbzQGsO2oYwH3AyQDlt4wJY43FZ1nrlAVWpzQ2mF7IyAy6LsQLKw2jg/exec", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  body: data.toString(),
+})
+.then(response => {
+  if (response.ok) return response.text();
+  else throw new Error("Submission failed");
+})
+.then(() => {
+  window.location.href = "thank-you.html";
+})
+.catch(error => {
+  console.error("Error:", error);
+  alert("Oops! Something went wrong. Please try again.");
+});
+
   });
 </script>
 
