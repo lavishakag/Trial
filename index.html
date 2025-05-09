@@ -75,16 +75,18 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link active" href="#home">Home</a>
         </li>
 
-        <!-- About Dropdown -->
+        <!-- About with clickable link and dropdown -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            About
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
             <li><a class="dropdown-item" href="partner.html">Partner with Us</a></li>
@@ -92,25 +94,20 @@
           </ul>
         </li>
 
-        <!-- Services Dropdown -->
+        <!-- Services with clickable link and dropdown -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Services
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
             <li><a class="dropdown-item" href="#weoffer">What We Offer</a></li>
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#clients">Our Clients</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="team.html">Our Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="#clients">Our Clients</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
