@@ -152,10 +152,15 @@ document.querySelector("#Partnership").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const form = e.target;
-  const data = new FormData(form);
-  fetch("https://script.google.com/macros/s/AKfycbwiaML4aZUiOyoqbzQGsO2oYwH3AyQDlt4wJY43FZ1nrlAVWpzQ2mF7IyAy6LsQLKw2jg/exec", {
-    method: "POST",
-    body: data,
+  const data = new URLSearchParams(new FormData(form));
+fetch("https://script.google.com/macros/s/AKfycbwiaML4aZUiOyoqbzQGsO2oYwH3AyQDlt4wJY43FZ1nrlAVWpzQ2mF7IyAy6LsQLKw2jg/exec", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  body: data.toString(),
+})
+
   })
   .then(response => {
     if (response.ok) return response.text();
