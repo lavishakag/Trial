@@ -91,39 +91,45 @@
 <!-- Form -->
 <div class="container application-form animate__animated animate__fadeInUp">
   <h2 class="mb-4 text-center">Job Application Form</h2>
- <form action="https://script.google.com/macros/s/AKfycbwiaML4aZUiOyoqbzQGsO2oYwH3AyQDlt4wJY43FZ1nrlAVWpzQ2mF7IyAy6LsQLKw2jg/exec" method="POST">
+<form action="https://script.google.com/macros/s/AKfycbwiaML4aZUiOyoqbzQGsO2oYwH3AyQDlt4wJY43FZ1nrlAVWpzQ2mF7IyAy6LsQLKw2jg/exec"
+      method="POST">
+
   <input type="hidden" name="sheet" value="Career">
 
-    <div class="row g-3">
-      <div class="col-md-6">
-        <label class="form-label">Full Name</label>
-        <input type="text" class="form-control" name="name" required>
-      </div>
-      <div class="col-md-6">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" required>
-      </div>
-      <div class="col-md-6">
-        <label class="form-label">Phone Number</label>
-        <input type="tel" class="form-control" name="phone" required>
-      </div>
-      <div class="col-md-6">
-        <label class="form-label">Position Applying For</label>
-        <input type="text" class="form-control" name="position" required>
-      </div>
-      <div class="col-12">
-        <label class="form-label">Resume (Paste Link)</label>
-        <input type="url" class="form-control" name="resume" placeholder="Google Drive / Dropbox Link" required>
-      </div>
-      <div class="col-12">
-        <label class="form-label">Cover Letter</label>
-        <textarea class="form-control" name="message" rows="5"></textarea>
-      </div>
-      <div class="col-12 text-center">
-        <button type="submit" class="btn btn-primary px-5 mt-3">Submit Application</button>
-      </div>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label">Full Name</label>
+      <input class="form-control" name="name" required>
     </div>
-  </form>
+
+    <div class="col-md-6">
+      <label class="form-label">Email</label>
+      <input class="form-control" type="email" name="email" required>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Phone</label>
+      <input class="form-control" name="phone">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Position Applying For</label>
+      <input class="form-control" name="position" required>
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Resume Link</label>
+      <input class="form-control" type="url" name="resume" placeholder="Google Drive / Dropbox link">
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Cover Letter</label>
+      <textarea class="form-control" name="message" rows="5"></textarea>
+    </div>
+  </div>
+
+  <button class="btn btn-primary mt-3">Submit Application</button>
+</form>
 </div>
 
 <!-- Script -->
